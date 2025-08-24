@@ -1,0 +1,72 @@
+
+        .container {
+            display: grid;
+            grid-template-columns: 100px 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px 100px 100px;
+            /* background-color: gray; */
+            
+            grid-template-areas:
+            "navBar navBar navBar"
+            "manu content-1 content-2"
+            "sideBar content-1 content-3"
+            "sideBar content-4 content-4"
+            "footer footer footerSideBar"
+            ;
+            gap: 10px;
+
+        }
+
+        .box {
+            background-color: green;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .item-1 {
+            grid-area: navBar;
+            background-color: #f35387;
+            border-radius: 10px;
+        }
+
+        .item-2 {
+            grid-area: manu;
+            background-color: #f14769;
+            border-radius: 10px;
+        }
+        .item-3 {
+            grid-area: content-1;
+            background-color: #ffd981;
+            border-radius: 10px;
+        }
+        .item-4 {
+            grid-area: content-2;
+            background-color: #f14769;
+            border-radius: 10px;
+        }
+        .item-5 {
+            grid-area: sideBar;
+            background-color: #cd5c7c;
+            border-radius: 10px;
+        }
+        .item-6 {
+            grid-area: content-3;
+            background-color: #8bc4d1;
+            border-radius: 10px;
+        }
+        .item-7 {
+            grid-area: content-4;
+            background-color: #fa743f;
+            border-radius: 10px;
+        }
+
+        .item-8 {
+            grid-area: footer;
+            background-color: #4b46a3;
+            border-radius: 10px;
+        }
+
+        .item-9 {
+            grid-area: footerSideBar;
+            background-color: #ffd981;
+            border-radius: 10px;
+        }

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+    <style>
+        :root {
+            --border: 1px solid green;
+            --borderRadius: 15px;
+            --padding: 20px;
+            --shadow: 1px 2px 3px #178c73;
+            --boxWidth: 100px;
+            --boxHeight: 100px;
+        }
+        .head {
+            color: #e28743;
+            text-align: center;
+            /* text-decoration: underline; */
+            font-family: fantasy;
+            letter-spacing: 1px;
+            border: var(--border);
+            border-radius: var(--borderRadius);
+            padding: var(--padding);
+            text-shadow: var(--shadow);
+        
+        }
+
+        .box {
+            border: var(--border);
+            width: var(--boxWidth);
+            height: var(--boxHeight);
+            background-color: blue;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            /* animation properties */
+            animation-name: moveBox;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes moveBox {
+            from{
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(1750px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="head">CSS Animation</h1>
+
+    <div class="box">
+        Normal box
+    </div>
+</body>
+</html>

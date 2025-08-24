@@ -1,0 +1,60 @@
+.header {
+    font-family: fantasy;
+    letter-spacing: 2px;
+    text-align: center;
+    border: 1px solid black;
+    padding: 10px;
+}
+/* Grid session */
+
+.container {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px 100px;
+    /* background-color: rgb(176, 255, 165); */
+    grid-template-areas: 
+    "Header Header Header"
+    "SideBar Content1 Content1"
+    "SideBar Content2 Content3"
+    "Footer Footer Footer"
+    ;
+    gap: 10px;
+   
+}
+
+.box {
+    background-color: gray;
+    text-align: center;
+    line-height: 100px;
+}
+
+.item-1 {
+    grid-area: Header;
+    background-color: green;
+  
+}
+
+.item-2 {
+    grid-area: SideBar;
+    background-color: red;
+
+}
+
+.item-3 {
+    grid-area: Content1;
+    background-color: yellow;
+}
+
+.item-4 {
+    grid-area: Content2;
+    background-color: blue;
+}
+
+.item-5 {
+    grid-area: Content3;
+    background-color: tomato;
+}
+
+.item-6 {
+   grid-area: Footer; 
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Practice | html and css</title>
+    <style>
+        :root {
+            --border: 1px solid black;
+            --height: 200px;
+            --width: 200px;
+            --backgroundColor: green;
+        }
+        
+        .box {
+            border: var(--border);
+            height: var(--height);
+            width: var(--width);
+            text-align: center;
+            line-height: 200px;
+            background-color: var(--backgroundColor);
+            /* animation properties  */
+
+            animation: moveBox 5s infinite;
+        }
+
+        @keyframes moveBox {
+            0% {
+                background-color: red;
+                margin-left: 0px;
+                
+            }
+
+            25% {
+                background-color: rgb(147, 230, 230);
+                margin-left: 450px;
+            }
+
+            50% {
+                background-color: yellow;
+                margin-left: 700px;
+            }
+
+            100% {
+                background-color: tomato;
+                margin-right: 1500px;
+            }
+        }
+        
+       
+        .container1 {
+            display: grid;
+            grid-template-columns: 100px 100px;
+            grid-template-rows: 100px 100px 100px;
+            grid-template-areas: 
+            "a a"
+            "b c"
+            "d d"
+            ;
+            gap: 10px;
+        }
+        .box-1 {
+            border: 1px solid black;
+            /* height: 200px;
+            width: 200px; */
+            line-height: 100px;
+            text-align: center;
+            grid-area: a;
+            background-color: tomato;
+            border-radius: 10px;
+        }
+        .box-2 {
+            border: 1px solid black;
+            /* height: 200px;
+            width: 200px; */
+            line-height: 100px;
+            text-align: center;
+            grid-area: b;
+            background-color: rgb(6, 205, 255);
+            border-radius: 10px;
+        }
+        .box-3 {
+            border: 1px solid black;
+            /* height: 200px;
+            width: 200px; */
+            line-height: 100px;
+            text-align: center;
+            grid-area: c;
+            background-color: rgb(47, 0, 255);
+            border-radius: 10px;
+        }
+        .box-4 {
+            border: 1px solid black;
+            /* height: 200px;
+            width: 200px; */
+            line-height: 100px;
+            text-align: center; 
+            grid-area: d;
+            background-color: rgb(255, 0, 221);
+            border-radius: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Moving Box</div>
+    </div>
+
+    <div class="container1">
+        <div class="box-1">1</div>
+        <div class="box-2">2</div>
+        <div class="box-3">3</div>
+        <div class="box-4">4</div>
+        <!-- <div class="box-5">5</div> -->
+    </div>
+</body>
+</html>

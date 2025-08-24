@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 8 - CSS Variables | Media Query</title>
+    <style>
+        :root {
+            --thisIsColorRed: red;
+            --thisIsBg: green;
+            --classBoarder: 1px solid green;
+            --paddingTenPx: 10px;
+            --textAlign: center;
+            --text-color: blue;
+        }
+        
+        h1 {
+            background-color: var(--thisIsBg)
+        }
+
+        .grass {
+            border: var(--classBoarder);
+            padding: var(--paddingTenPx);
+            text-align: var(--textAlign);
+        }
+
+        /* .call {
+            color: var(--thisIsColorRed);
+        } */
+
+        .call {
+            --text-color: #e28743;
+        }
+        @media screen and (max-width: 400px) {
+            body{
+                background-color: gray;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        This is heading 
+    </h1>
+
+    <div class="grass">
+        Hello Class CSS Variable
+    </div>
+
+    <div id="para">
+        this id with css variable
+    </div>
+    <div class="call">
+        <p>this is local scope</p>
+    </div>
+</body>
+</html>
